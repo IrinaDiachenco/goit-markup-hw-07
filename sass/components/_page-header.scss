@@ -1,0 +1,153 @@
+@import '../utils/variables';
+
+.site-header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: $header-bg-color;
+}
+
+.site-nav-header {
+    background-color: $header-bg-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.site-nav-main {
+    width: 294px;
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 85px;
+    margin-right: 0px;
+    margin-right: 0px;
+    
+ .item:not(:last-child) {
+    margin-right: 52px;
+    }
+}
+
+.site-nav-main1 {
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 305px;
+    
+ .item {
+    display: flex;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+ .item + .item{
+    margin-left: 30px;
+ }
+
+ .item:hover {
+    color: $accent-text-color;
+    fill: $accent-text-color;
+ }
+
+ .item:hover svg {
+    fill: inherit;
+ }
+}
+
+.link {
+    font-family: $fonts;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $title-text-color;
+    position: relative;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ 
+ &.current {
+    color: $accent-text-color;
+ }
+
+ &:hover,
+ &:focus {
+    color: $accent-text-color;
+ }
+
+ &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    top: 50px;
+    background-color: $accent-text-color;
+    border-radius: 4px;
+    opacity: 0;
+ }
+
+ &.current::after {
+    opacity: 1;
+ }
+}
+
+.email {
+    font-family: $fonts;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $secondary-text-color;
+
+ &:hover {
+    color: $accent-text-color;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ }
+}
+
+.tel {
+    font-family: $fonts;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $secondary-text-color;
+ &:hover {
+    color: $accent-text-color;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ }
+}
+
+.icon {
+ &-mail {
+    width: 16px;
+    height: 11.2px;
+    margin-right: 10px;
+    fill: $secondary-text-color;
+    cursor: pointer;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ &-tel {
+    width: 16px;
+    height: 11.2px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+ }
+}
+
+.main {
+    padding-top: 94px;
+}

@@ -1,0 +1,65 @@
+@import '../utils/variables';
+
+.doing {
+ &-img {
+    display: block;
+  }
+
+ &-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+ }
+
+ &-title {
+    min-width: 376px;
+    justify-content: center;
+    margin-bottom: 50px;
+ }
+
+ &-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+ }
+ 
+}
+.title-doing {
+    font-family: $fonts;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+ }
+
+.box {
+    margin: 0px;
+    position: relative;
+}
+
+.secondary-function1 {
+    width: 100%;
+    font-family: $fonts;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    color: $header-bg-color;
+    background: rgba(47, 48, 58, 0.8);
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    bottom: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
+
+.text {
+    width: 270px;
+    height: 75px;
+}

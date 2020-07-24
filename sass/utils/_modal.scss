@@ -1,0 +1,235 @@
+@import '../utils/variables';
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+ &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+ &.is-hidden .popup {
+    transform: translate(-50%, -50%) scale(0.9);
+ }
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    min-width: 528px;
+    min-height: 581px;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+ &-button {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.88;
+    color: $header-bg-color;
+    background-color: $accent-color;
+    padding: 10px 55px 10px 56px;
+    border: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    margin-top: 30px;
+    margin-left: 109px;
+    margin-right: 108px;
+ }
+}
+
+.form {
+    width: 528px;
+    outline: 1px solid #188CE8;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    padding: 40px;
+    position: relative;
+
+ & input {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 12px 42px;
+    width: 100%;
+    cursor: pointer;
+ } 
+
+ &-input:focus input{
+    border-color: #2196F3;
+    border-radius: 4px;
+ }
+
+ &-label {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    transform: translateY(-50%);
+    transition: transform 250ms linear;
+ }
+
+ &-input:focus ~ .icon-form {
+    fill: #188CE8;
+ }
+
+ &-input:focus + &-label,
+ &-input:not(:placeholder-shown) + &-label {
+   color: #188CE8;
+   transform: translateY(-50px) translateX(-70%);
+ }
+}
+
+.textarea-label {
+    position: absolute;
+    top: 15%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: transform 250ms linear;
+}
+
+.comment {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 12px 16px;
+    width: 100%;
+    cursor: pointer;
+
+ .form-label {
+    position: absolute;
+    top: 0;
+ }
+
+ &:focus + .textarea-label,
+ &:not(:placeholder-shown) + .textarea-label {
+    color: #188CE8;
+    transform: translateY(-50px) translateX(-40%);
+ }
+
+ &:focus + .form-label,
+ &:not(:placeholder-shown) + .form-label {
+   color: #188CE8;
+   transform: translateY(-50px) translateX(-70%);
+ }
+}
+
+.form-field {
+    margin-bottom: 28px;
+    position: relative;
+
+ input:focus,
+ textarea:focus {
+    outline: none;
+    border-color: $accent-color;
+ }
+}
+
+.icon-form {
+   position: absolute;
+   top: 50%;
+   left: 19px;
+   transform: translateY(-50%);
+   display: inline-block;
+   fill: #212121;
+}
+
+.button-close {
+    width: 11px;
+    height: 11px;
+    fill: #000000;
+
+ &:focus,
+ &:hover {
+    fill: #2196F3;
+ }
+}
+
+.close-bg {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    outline: none;
+    background-color: $header-bg-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+ &:hover .button-close {
+    fill: #2196F3;
+ }
+}
+
+.text {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $secondary-text-color;
+
+ &-form {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 30px;
+ }
+
+ &-form-secondary {
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #757575;
+    text-align: center;
+ }
+
+ &-link {
+    color: #188CE8;
+ }
+}
+
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+ &-label &-icon {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+ }
+
+ &:checked + &-icon {
+    display: inline-block;
+    position: absolute;
+    background-color: $accent-color;
+    background-image: url(../images/icon-check1.svg);
+    border: 2px solid $accent-color;
+    justify-content: center;
+ }
+}
+

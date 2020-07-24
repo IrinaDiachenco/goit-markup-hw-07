@@ -1,0 +1,45 @@
+@import '../utils/variables';
+
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 200px;
+    padding-top: 200px;
+    align-items: center;
+
+ &-tittle {
+    font-family: $fonts;
+    font-weight: 900;
+    line-height: 1.36;
+    color: $header-bg-color;
+    text-align: center;
+    margin-bottom: 30px;
+ }
+
+ .button-& {
+    color: $header-bg-color;
+    background-color: $accent-color;
+    font-family: $fonts;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.88;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 0px;
+ }
+}
+
+.overlay {
+    max-width: 1600px;
+    height: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/heromg.jpg);
+}
