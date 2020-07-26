@@ -7,13 +7,6 @@
     background-color: $secondary-bg-color;
  }
 
- .title-& {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-    margin-top: 0px;
- }
-
  &-item {
     display: flex; 
     justify-content: space-between;
@@ -28,17 +21,15 @@
  }
 }
 
+.title-team {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 50px;
+   margin-top: 0px;
+}
+
 .link {
- .social-& {
-    width: 206px;
-    height: 44px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 0px;
-    margin-left: 32px;
-    margin-bottom: 24px;
- }
+ 
 
  &-bg {
     width: 44px;
@@ -63,6 +54,17 @@
  }
 }
 
+.social-link {
+   width: 206px;
+   height: 44px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-left: 0px;
+   margin-left: 32px;
+   margin-bottom: 24px;
+}
+
 .icon-instagram,
 .icon-twitter,
 .icon-fb,
@@ -84,6 +86,7 @@ h1 {
 
 .name {
     font-family: $fonts;
+    font-weight: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -92,6 +95,7 @@ h1 {
 
 .position {
     font-family: $fonts;
+    font-weight: normal;
     font-size: 16px;
     line-height: 1.19;
     color: $secondary-text-color;

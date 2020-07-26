@@ -21,16 +21,16 @@
     left: 815px;
     background: $secondary-bg-color;
  }
+}
 
- .secondary-& {
-    width: 270px;
-    height: 16px;
-    font-family: $fonts;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 1.14;
-    margin-bottom: 10px;
- }
+.secondary-function {
+   width: 270px;
+   height: 16px;
+   font-family: $fonts;
+   font-weight: bold;
+   font-size: 14px;
+   line-height: 1.14;
+   margin-bottom: 10px;
 }
 
 .icon {
