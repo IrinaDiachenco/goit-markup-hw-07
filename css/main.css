@@ -216,7 +216,9 @@ footer .logo {
   padding-top: 94px;
 }
 
-.hero {
+.hero-section {
+  max-width: 1600px;
+  height: 480px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,19 +229,8 @@ footer .logo {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
   padding-bottom: 200px;
   padding-top: 200px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.hero-section {
-  max-width: 1600px;
-  height: 480px;
-  margin-left: auto;
-  margin-right: auto;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/heromg.jpg);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/heromg.jpg);
 }
@@ -252,6 +243,10 @@ footer .logo {
   color: #FFFFFF;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.hero-section .container {
+  text-align: center;
 }
 
 .button-hero {
